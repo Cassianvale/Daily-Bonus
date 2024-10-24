@@ -5,7 +5,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: '30 23 * * *'
+    - cron: '0 8 * * *'  # 每天早上 8 点运行
 
 jobs:
   checkin:
@@ -18,14 +18,14 @@ jobs:
 
     env:
       V2EX_COOKIES: ${{ secrets.V2EX_COOKIES }}
-      BILIBILI_COOKIES: ${{ secrets.BILIBILI_COOKIES }}
-      YAMIBO_COOKIES: ${{ secrets.YAMIBO_COOKIES }}
-      YURIFANS_EMAIL: ${{ secrets.YURIFANS_EMAIL }}
-      YURIFANS_PASSWORD: ${{ secrets.YURIFANS_PASSWORD }}
-      PICA_EMAIL: ${{ secrets.PICA_EMAIL }}
-      PICA_PASSWORD: ${{ secrets.PICA_PASSWORD }}
-      TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-      TG_USER_ID: ${{ secrets.TG_USER_ID }}
+      # BILIBILI_COOKIES: ${{ secrets.BILIBILI_COOKIES }}
+      # YAMIBO_COOKIES: ${{ secrets.YAMIBO_COOKIES }}
+      # YURIFANS_EMAIL: ${{ secrets.YURIFANS_EMAIL }}
+      # YURIFANS_PASSWORD: ${{ secrets.YURIFANS_PASSWORD }}
+      # PICA_EMAIL: ${{ secrets.PICA_EMAIL }}
+      # PICA_PASSWORD: ${{ secrets.PICA_PASSWORD }}
+      # TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+      # TG_USER_ID: ${{ secrets.TG_USER_ID }}
 
     steps:
       - name: Checkout repo
